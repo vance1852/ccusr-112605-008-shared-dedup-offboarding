@@ -1,0 +1,75 @@
+{
+  "inventory": {
+    "leases": {
+      "east": {
+        "logical_limit": 165,
+        "assigned": 96,
+        "store": "d-east"
+      },
+      "west": {
+        "logical_limit": 175,
+        "assigned": 73,
+        "store": "d-west"
+      },
+      "lab": {
+        "logical_limit": 120,
+        "assigned": 80,
+        "store": "d-lab"
+      }
+    },
+    "share_pacts": [
+      {
+        "group": "p1",
+        "members": [
+          "east",
+          "west"
+        ],
+        "valid_until": 24
+      }
+    ],
+    "initial": [
+      {
+        "store": "d-east",
+        "object": "E1",
+        "owner": "east",
+        "payload": "common"
+      },
+      {
+        "store": "d-east",
+        "object": "W1",
+        "owner": "west",
+        "payload": "common"
+      },
+      {
+        "store": "d-west",
+        "object": "W2",
+        "owner": "west",
+        "payload": "west-only"
+      }
+    ],
+    "hint": "sha256-prefix-8",
+    "collision_hint": "0e"
+  },
+  "payloads": {
+    "common": {
+      "bytes": 46,
+      "sha256": "d282aef4759db8f65066fab2f86bdcb53a1fece8b44bb5a1cdd5060873ff7aeb"
+    },
+    "west-only": {
+      "bytes": 32,
+      "sha256": "dc6d86d67e1f1a025b33fafee56cf8017cbaf58d98bc0931b9394070ad4ae5d0"
+    },
+    "matching": {
+      "bytes": 46,
+      "sha256": "d282aef4759db8f65066fab2f86bdcb53a1fece8b44bb5a1cdd5060873ff7aeb"
+    },
+    "colliding-a": {
+      "bytes": 33,
+      "sha256": "0e48bd01e27efe7f65722d95579823e71258962478c80c8b10ad5fb6a1f82235"
+    },
+    "colliding-b": {
+      "bytes": 33,
+      "sha256": "0e553114c3a986cbc005d47d61c1f4088766770db5cba0c97a9acaf956a5bd64"
+    }
+  }
+}

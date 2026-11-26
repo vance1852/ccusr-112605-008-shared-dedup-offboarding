@@ -1,0 +1,6 @@
+{"time": 1, "kind": "revoke_pact", "group": "p1", "tenant": "west"}
+{"time": 2, "kind": "put", "tenant": "west", "object": "W6", "payload": "matching"}
+{"time": 3, "kind": "copy_start", "id": "c1", "payload": "common", "source": "d-east", "target": "d-west"}
+{"time": 4, "kind": "device", "id": "c1", "target": "d-west", "result": "insufficient"}
+{"time": 5, "kind": "open", "tenant": "west", "object": "W1", "reader": "c3"}
+{"time": 6, "kind": "read", "reader": "c3"}

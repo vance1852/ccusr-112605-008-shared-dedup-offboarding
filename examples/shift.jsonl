@@ -1,0 +1,13 @@
+{"time": 1, "kind": "put", "tenant": "east", "object": "A2", "payload": "colliding-a", "hint": "0e"}
+{"time": 2, "kind": "put", "tenant": "west", "object": "W3", "payload": "colliding-b", "hint": "0e"}
+{"time": 3, "kind": "open", "tenant": "west", "object": "W1", "reader": "r1"}
+{"time": 4, "kind": "depart", "tenant": "east", "mark": "phase-1"}
+{"time": 6, "kind": "put", "tenant": "west", "object": "W4", "payload": "matching"}
+{"time": 8, "kind": "resize", "store": "d-west", "assigned": 133}
+{"time": 10, "kind": "copy_start", "id": "m", "payload": "common", "source": "d-east", "target": "d-west"}
+{"time": 11, "kind": "device", "id": "m", "result": "durable", "target": "d-west"}
+{"time": 12, "kind": "remove_request", "store": "d-east", "payload": "common", "id": "p"}
+{"time": 13, "kind": "read", "reader": "r1"}
+{"time": 14, "kind": "crash"}
+{"time": 25, "kind": "put", "tenant": "lab", "object": "L1", "payload": "matching"}
+{"time": 27, "kind": "device", "id": "p", "result": "removed", "target": "d-east"}
